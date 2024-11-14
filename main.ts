@@ -89,7 +89,7 @@ function createProject(title: string, deepLink: string, api: TodoistApi) {
 
 export function createTask(processedLine: line, deepLink: string, api: TodoistApi, transformToLink: boolean, fileName: string) {
 	console.log(processedLine)
-	api.addTask({
+	api.quickAddTask({
 		content: `${processedLine.externalLinkFormat}`,
 		description: `[${fileName}](${deepLink})`,
 	}).then(
